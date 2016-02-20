@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Parent View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ParentViewController" customModule="SSEventFlow_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +16,99 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F4O-Fu-UXY">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="yeW-lc-DUK"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="uPu-cf-Glr" kind="embed" id="Kcy-E1-Vfl"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ch-aO-jLU">
+                                <rect key="frame" x="279" y="285" width="42" height="30"/>
+                                <state key="normal" title="Green">
+                                    <color key="titleColor" red="0.67058825489999996" green="0.93725496529999996" blue="0.43921571970000001" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="greenButtonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JCC-kp-JPd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxj-N3-wP1">
+                                <rect key="frame" x="241" y="285" width="30" height="30"/>
+                                <state key="normal" title="Red">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="redButtonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1WR-5y-RQY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZS5-Z8-0xE">
+                                <rect key="frame" x="329" y="285" width="31" height="30"/>
+                                <state key="normal" title="Blue"/>
+                                <connections>
+                                    <action selector="blueButtonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JIF-Oa-2ix"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32K-4D-jKV">
+                                <rect key="frame" x="281" y="550" width="39" height="30"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButtonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="870-Xy-XcM"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zxj-N3-wP1" firstAttribute="baseline" secondItem="3Ch-aO-jLU" secondAttribute="baseline" id="BCR-Zo-5xH"/>
+                            <constraint firstItem="ZS5-Z8-0xE" firstAttribute="leading" secondItem="3Ch-aO-jLU" secondAttribute="trailing" constant="8" id="Hlf-jS-THd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="F4O-Fu-UXY" secondAttribute="trailing" constant="-20" id="JOl-9a-Iuc"/>
+                            <constraint firstItem="32K-4D-jKV" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="OPT-7s-3Fz"/>
+                            <constraint firstItem="3Ch-aO-jLU" firstAttribute="leading" secondItem="zxj-N3-wP1" secondAttribute="trailing" constant="8" id="c27-zJ-L3S"/>
+                            <constraint firstItem="F4O-Fu-UXY" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-20" id="cz4-D5-B2E"/>
+                            <constraint firstItem="3Ch-aO-jLU" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="lba-7n-cVe"/>
+                            <constraint firstItem="3Ch-aO-jLU" firstAttribute="baseline" secondItem="ZS5-Z8-0xE" secondAttribute="baseline" id="lgM-7a-cNa"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="32K-4D-jKV" secondAttribute="bottom" constant="20" id="o9I-qO-KAk"/>
+                            <constraint firstItem="3Ch-aO-jLU" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="re7-b6-pCC"/>
+                            <constraint firstItem="F4O-Fu-UXY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-20" id="xAc-7I-XpG"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="835" y="657"/>
+        </scene>
+        <!--Child View Controller-->
+        <scene sceneID="ceq-pd-2Uz">
+            <objects>
+                <viewController id="uPu-cf-Glr" customClass="ChildViewController" customModule="SSEventFlow_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jI5-Zj-sKF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NO COLOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKx-EW-RPm">
+                                <rect key="frame" x="257" y="39" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rKx-EW-RPm" firstAttribute="centerX" secondItem="jI5-Zj-sKF" secondAttribute="centerX" id="dlQ-xT-XCu"/>
+                            <constraint firstItem="rKx-EW-RPm" firstAttribute="centerY" secondItem="jI5-Zj-sKF" secondAttribute="centerY" id="mX4-f9-46D"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colorName" destination="rKx-EW-RPm" id="gX7-fs-wlb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GUy-qM-z2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1566" y="657"/>
         </scene>
     </scenes>
 </document>
