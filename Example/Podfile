@@ -1,0 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'SSEventFlow_Example', :exclusive => true do
+  pod 'SSEventFlow', :path => '../'
+end
+
+target 'SSEventFlow_Tests', :exclusive => true do
+  pod 'SSEventFlow', :path => '../'
+
+  pod 'Quick', '~> 0.8.0'
+  pod 'Nimble', '3.0.0'
+end
