@@ -7,7 +7,7 @@
 SSEventFlow is a type safe alternative to NSNotification, inspired by Flux.
 
 The Flux Application Architecture was recently invented by Facebook.
-See [https://facebook.github.io/flux/docs/overview.html](video to how Flux works).
+[See video to how it works](https://facebook.github.io/flux/docs/overview.html)
 
 
 ## Usage
