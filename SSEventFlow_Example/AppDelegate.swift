@@ -1,11 +1,4 @@
-//
-//  AppDelegate.swift
-//  SSEventFlow_Example
-//
-//  Created by Simon Strandgaard on 02/20/2016.
-//  Copyright (c) 2016 Simon Strandgaard. All rights reserved.
-//
-
+// MIT license. Copyright (c) 2016 Simon Strandgaard. All rights reserved.
 import UIKit
 import SSEventFlow
 
@@ -13,12 +6,12 @@ import SSEventFlow
 class AppDelegate: UIResponder, UIApplicationDelegate, FlowDispatcher {
     var window: UIWindow?
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		flow_start()
         return true
     }
 	
-	func flow_dispatch(event: FlowEvent) {
+	func flow_dispatch(_ event: FlowEvent) {
 		print("AppDelegate.flow_dispatch()\n  \(event)\n")
 	}
 }

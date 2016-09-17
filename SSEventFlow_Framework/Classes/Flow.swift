@@ -1,4 +1,4 @@
-//  Copyright © 2015 Simon Strandgaard. All rights reserved.
+// MIT license. Copyright (c) 2016 Simon Strandgaard. All rights reserved.
 public protocol FlowEvent {}
 
 extension FlowEvent {
@@ -8,7 +8,7 @@ extension FlowEvent {
 
 
 public protocol FlowDispatcher: class {
-	func flow_dispatch(event: FlowEvent)
+	func flow_dispatch(_ event: FlowEvent)
 }
 
 extension FlowDispatcher {
@@ -28,7 +28,7 @@ internal class FlowManager {
 	}
 	var boxes = [Box]()
 	
-	func dispatch(event: FlowEvent) {
+	func dispatch(_ event: FlowEvent) {
 		purge()
 		for box in boxes { box.dispatcher?.flow_dispatch(event) }
 	}
@@ -41,12 +41,12 @@ internal class FlowManager {
 		boxes = []
 	}
 	
-	func install(dispatcher: FlowDispatcher) {
+	func install(_ dispatcher: FlowDispatcher) {
 		uninstall(dispatcher)
 		boxes.append(Box(dispatcher: dispatcher))
 	}
 	
-	func uninstall(dispatcher: FlowDispatcher) {
+	func uninstall(_ dispatcher: FlowDispatcher) {
 		boxes = boxes.filter { $0.dispatcher !== dispatcher }
 		purge()
 	}
