@@ -1,4 +1,4 @@
-//  Copyright © 2015 Simon Strandgaard. All rights reserved.
+// MIT license. Copyright (c) 2016 Simon Strandgaard. All rights reserved.
 public protocol FlowEvent {}
 
 extension FlowEvent {

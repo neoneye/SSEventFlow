@@ -1,11 +1,4 @@
-//
-//  ViewControllers.swift
-//  SSEventFlow_Example
-//
-//  Created by Simon Strandgaard on 02/20/2016.
-//  Copyright (c) 2016 Simon Strandgaard. All rights reserved.
-//
-
+// MIT license. Copyright (c) 2016 Simon Strandgaard. All rights reserved.
 import UIKit
 import SSEventFlow
 

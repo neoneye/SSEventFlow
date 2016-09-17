@@ -1,11 +1,4 @@
-//
-//  SSEventFlow_Tests.swift
-//  SSEventFlow_Tests
-//
-//  Created by Simon Strandgaard on 21-02-16.
-//  Copyright (c) 2016 Simon Strandgaard. All rights reserved.
-//
-
+// MIT license. Copyright (c) 2016 Simon Strandgaard. All rights reserved.
 import XCTest
 @testable import SSEventFlow
 
