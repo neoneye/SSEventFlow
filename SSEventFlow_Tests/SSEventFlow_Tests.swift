@@ -10,9 +10,9 @@ import XCTest
 @testable import SSEventFlow
 
 class MyDispatcher: FlowDispatcher {
-	let closure: (Void) -> Void
+	let closure: () -> Void
 	
-	init(closure: @escaping (Void) -> Void) {
+	init(closure: @escaping () -> Void) {
 		self.closure = closure
 	}
 	
@@ -34,11 +34,10 @@ class SSEventFlow_Tests: XCTestCase {
 		super.setUp()
 		FlowManager.sharedInstance.reset()
 		count = 0
-		let dispatcher = MyDispatcher() { [weak self] in
+		dispatcher = MyDispatcher() { [weak self] in
 			self?.count += 1
 		}
-		self.dispatcher = dispatcher
-		dispatcher.flow_start()
+		dispatcher?.flow_start()
 	}
 	
 	override func tearDown() {
@@ -55,14 +54,14 @@ class SSEventFlow_Tests: XCTestCase {
 	
 	func testUninstallWhenNilled() {
 		XCTAssertEqual(0, count)
-		self.dispatcher = nil
+		dispatcher = nil
 		MyIncrementAction().fire()
 		XCTAssertEqual(0, count)
 	}
 	
 	func testStop() {
 		XCTAssertEqual(0, count)
-		self.dispatcher?.flow_stop()
+		dispatcher?.flow_stop()
 		MyIncrementAction().fire()
 		XCTAssertEqual(0, count)
 	}
