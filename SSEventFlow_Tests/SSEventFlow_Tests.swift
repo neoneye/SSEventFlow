@@ -10,13 +10,13 @@ import XCTest
 @testable import SSEventFlow
 
 class MyDispatcher: FlowDispatcher {
-	let closure: Void -> Void
+	let closure: (Void) -> Void
 	
-	init(closure: Void -> Void) {
+	init(closure: @escaping (Void) -> Void) {
 		self.closure = closure
 	}
 	
-	func flow_dispatch(event: FlowEvent) {
+	func flow_dispatch(_ event: FlowEvent) {
 		closure()
 	}
 }
