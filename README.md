@@ -17,7 +17,9 @@ Open the SSEventFlow.xcodeproj file and run the Example project.
 
 ## Requirements
 
-This framework is for iOS 8 and for OSX 10.10
+- iOS 9.0+ / macOS 10.11+
+- Xcode 8.0+
+- Swift 3.0+
 
 
 ## Installation
