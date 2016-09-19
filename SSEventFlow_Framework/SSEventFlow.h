@@ -1,11 +1,4 @@
-//
-//  SSEventFlow.h
-//  SSEventFlow
-//
-//  Created by Simon Strandgaard on 21-02-16.
-//  Copyright © 2016 CocoaPods. All rights reserved.
-//
-
+// MIT license. Copyright (c) 2016 Simon Strandgaard. All rights reserved.
 #import <UIKit/UIKit.h>
 
 //! Project version number for SSEventFlow.

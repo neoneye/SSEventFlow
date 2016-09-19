@@ -17,7 +17,9 @@ Open the SSEventFlow.xcodeproj file and run the Example project.
 
 ## Requirements
 
-This framework is for iOS 8 and for OSX 10.10
+- iOS 9.0+ / macOS 10.11+
+- Xcode 8.0+
+- Swift 3.0+
 
 
 ## Installation
@@ -34,16 +36,16 @@ pod "SSEventFlow"
 
 ```swift
 class ParentViewController: UIViewController {
-	@IBAction func redButtonAction(sender: AnyObject) {
-		PickedColorEvent(color: UIColor.redColor(), name: "RED").fire()
+	@IBAction func redButtonAction(_ sender: AnyObject) {
+		PickedColorEvent(color: UIColor.red, name: "RED").fire()
 	}
-	@IBAction func greenButtonAction(sender: AnyObject) {
-		PickedColorEvent(color: UIColor.greenColor(), name: "GREEN").fire()
+	@IBAction func greenButtonAction(_ sender: AnyObject) {
+		PickedColorEvent(color: UIColor.green, name: "GREEN").fire()
 	}
-	@IBAction func blueButtonAction(sender: AnyObject) {
-		PickedColorEvent(color: UIColor.blueColor(), name: "BLUE").fire()
+	@IBAction func blueButtonAction(_ sender: AnyObject) {
+		PickedColorEvent(color: UIColor.blue, name: "BLUE").fire()
 	}
-	@IBAction func resetButtonAction(sender: AnyObject) {
+	@IBAction func resetButtonAction(_ sender: AnyObject) {
 		ResetEvent().fire()
 	}
 }
@@ -56,17 +58,17 @@ class ParentViewController: UIViewController {
 class ChildViewController: UIViewController, FlowDispatcher {
 	@IBOutlet weak var colorName: UILabel!
 	
-	override func viewWillAppear(animated: Bool) {
+	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		flow_start()
 	}
 	
-	override func viewDidDisappear(animated: Bool) {
+	override func viewDidDisappear(_ animated: Bool) {
 		flow_stop()
 		super.viewDidDisappear(animated)
 	}
 	
-	func flow_dispatch(event: FlowEvent) {
+	func flow_dispatch(_ event: FlowEvent) {
 		if let e = event as? PickedColorEvent {
 			view.backgroundColor = e.color
 			colorName.text = e.name
