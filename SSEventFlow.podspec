@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SSEventFlow"
-  s.version          = "0.2.0"
+  s.version          = "1.0.0"
   s.summary          = "SSEventFlow is a type safe alternative to NSNotification, inspired by Flux"
   s.description      = <<-DESC
                        This is a tiny variant of the Flux Application Architecture, invented by Facebook.
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.author           = { "Simon Strandgaard" => "neoneye@gmail.com" }
   s.source           = { :git => "https://github.com/neoneye/SSEventFlow.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/neoneye'
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
   s.osx.deployment_target = '10.10'
   s.source_files = 'SSEventFlow_Framework/Classes/*'
 end
