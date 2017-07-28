@@ -3,7 +3,7 @@ public protocol FlowEvent {}
 
 extension FlowEvent {
 	/// Send event to all installed dispatchers
-	public func fire() { FlowManager.sharedInstance.dispatch(self) }
+	public func fire() { FlowManager.shared.dispatch(self) }
 }
 
 
@@ -13,15 +13,15 @@ public protocol FlowDispatcher: class {
 
 extension FlowDispatcher {
 	/// Start listening for events. Does nothing if already started.
-	public func flow_start() { FlowManager.sharedInstance.install(self) }
+	public func flow_start() { FlowManager.shared.install(self) }
 
 	/// Stop listening for events. Does nothing if already stopped.
-	public func flow_stop() { FlowManager.sharedInstance.uninstall(self) }
+	public func flow_stop() { FlowManager.shared.uninstall(self) }
 }
 
 
 internal class FlowManager {
-	static var sharedInstance = FlowManager()
+	static var shared = FlowManager()
 
 	struct Box {
 		weak var dispatcher: FlowDispatcher?

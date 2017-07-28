@@ -25,7 +25,7 @@ class SSEventFlow_Tests: XCTestCase {
 	
 	override func setUp() {
 		super.setUp()
-		FlowManager.sharedInstance.reset()
+		FlowManager.shared.reset()
 		count = 0
 		dispatcher = MyDispatcher() { [weak self] in
 			self?.count += 1
