@@ -91,7 +91,7 @@ You are welcome to use SSEventFlow free of charge.
 If you are using and enjoying my work, maybe you could donate me a beer (or if you don’t drink – 
 a coffee and bagel will do just fine, a good kind of bagel though, you know… with wonderful stuff inside to make it glorious).
 
-[Please donate via PayPal](paypal.me/SimonStrandgaard) and just like they say on TV – give generously! It motivates me to keep working on this.
+[Please donate via PayPal](https://paypal.me/SimonStrandgaard) and just like they say on TV – give generously! It motivates me to keep working on this.
 
 
 # License
