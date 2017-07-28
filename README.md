@@ -36,18 +36,18 @@ pod "SSEventFlow"
 
 ```swift
 class ParentViewController: UIViewController {
-	@IBAction func redButtonAction(_ sender: AnyObject) {
-		PickedColorEvent(color: UIColor.red, name: "RED").fire()
-	}
-	@IBAction func greenButtonAction(_ sender: AnyObject) {
-		PickedColorEvent(color: UIColor.green, name: "GREEN").fire()
-	}
-	@IBAction func blueButtonAction(_ sender: AnyObject) {
-		PickedColorEvent(color: UIColor.blue, name: "BLUE").fire()
-	}
-	@IBAction func resetButtonAction(_ sender: AnyObject) {
-		ResetEvent().fire()
-	}
+    @IBAction func redButtonAction(_ sender: Any) {
+        PickedColorEvent(color: UIColor.red, name: "RED").fire()
+    }
+    @IBAction func greenButtonAction(_ sender: Any) {
+        PickedColorEvent(color: UIColor.green, name: "GREEN").fire()
+    }
+    @IBAction func blueButtonAction(_ sender: Any) {
+        PickedColorEvent(color: UIColor.blue, name: "BLUE").fire()
+    }
+    @IBAction func resetButtonAction(_ sender: Any) {
+        ResetEvent().fire()
+    }
 }
 ```
 
@@ -55,29 +55,31 @@ class ParentViewController: UIViewController {
 ## Example of how to listen for notifications
 
 ```swift
-class ChildViewController: UIViewController, FlowDispatcher {
-	@IBOutlet weak var colorName: UILabel!
-	
-	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
-		flow_start()
-	}
-	
-	override func viewDidDisappear(_ animated: Bool) {
-		flow_stop()
-		super.viewDidDisappear(animated)
-	}
-	
-	func flow_dispatch(_ event: FlowEvent) {
-		if let e = event as? PickedColorEvent {
-			view.backgroundColor = e.color
-			colorName.text = e.name
-		}
-		if event is ResetEvent {
-			view.backgroundColor = nil
-			colorName.text = ""
-		}
-	}
+class ChildViewController: UIViewController {
+    @IBOutlet weak var colorName: UILabel!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        flow_start()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        flow_stop()
+        super.viewDidDisappear(animated)
+    }
+}
+
+extension ChildViewController: FlowDispatcher {
+    func flow_dispatch(_ event: FlowEvent) {
+        if let e = event as? PickedColorEvent {
+            view.backgroundColor = e.color
+            colorName.text = e.name
+        }
+        if event is ResetEvent {
+            view.backgroundColor = nil
+            colorName.text = ""
+        }
+    }
 }
 ```
 
