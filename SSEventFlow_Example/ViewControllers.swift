@@ -16,22 +16,22 @@ struct ResetEvent: FlowEvent {}
 
 
 class ParentViewController: UIViewController {
-	@IBAction func redButtonAction(_ sender: AnyObject) {
+	@IBAction func redButtonAction(_ sender: Any) {
 		PickedColorEvent(color: UIColor.red, name: "RED").fire()
 	}
-	@IBAction func greenButtonAction(_ sender: AnyObject) {
+	@IBAction func greenButtonAction(_ sender: Any) {
 		PickedColorEvent(color: UIColor.green, name: "GREEN").fire()
 	}
-	@IBAction func blueButtonAction(_ sender: AnyObject) {
+	@IBAction func blueButtonAction(_ sender: Any) {
 		PickedColorEvent(color: UIColor.blue, name: "BLUE").fire()
 	}
-	@IBAction func resetButtonAction(_ sender: AnyObject) {
+	@IBAction func resetButtonAction(_ sender: Any) {
 		ResetEvent().fire()
 	}
 }
 
 
-class ChildViewController: UIViewController, FlowDispatcher {
+class ChildViewController: UIViewController {
 	@IBOutlet weak var colorName: UILabel!
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -43,7 +43,9 @@ class ChildViewController: UIViewController, FlowDispatcher {
 		flow_stop()
 		super.viewDidDisappear(animated)
 	}
-	
+}
+
+extension ChildViewController: FlowDispatcher {
 	func flow_dispatch(_ event: FlowEvent) {
 		if let e = event as? PickedColorEvent {
 			view.backgroundColor = e.color
@@ -55,4 +57,3 @@ class ChildViewController: UIViewController, FlowDispatcher {
 		}
 	}
 }
-
