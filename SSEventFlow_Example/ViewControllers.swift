@@ -31,7 +31,7 @@ class ParentViewController: UIViewController {
 }
 
 
-class ChildViewController: UIViewController, FlowDispatcher {
+class ChildViewController: UIViewController {
 	@IBOutlet weak var colorName: UILabel!
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -43,7 +43,9 @@ class ChildViewController: UIViewController, FlowDispatcher {
 		flow_stop()
 		super.viewDidDisappear(animated)
 	}
-	
+}
+
+extension ChildViewController: FlowDispatcher {
 	func flow_dispatch(_ event: FlowEvent) {
 		if let e = event as? PickedColorEvent {
 			view.backgroundColor = e.color
@@ -55,4 +57,3 @@ class ChildViewController: UIViewController, FlowDispatcher {
 		}
 	}
 }
-
