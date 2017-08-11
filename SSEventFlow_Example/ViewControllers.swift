@@ -1,4 +1,4 @@
-// MIT license. Copyright (c) 2016 Simon Strandgaard. All rights reserved.
+// MIT license. Copyright (c) 2017 Simon Strandgaard. All rights reserved.
 import UIKit
 import SSEventFlow
 
@@ -11,9 +11,7 @@ struct PickedColorEvent: FlowEvent {
 	}
 }
 
-
 struct ResetEvent: FlowEvent {}
-
 
 class ParentViewController: UIViewController {
 	@IBAction func redButtonAction(_ sender: Any) {
@@ -30,15 +28,14 @@ class ParentViewController: UIViewController {
 	}
 }
 
-
 class ChildViewController: UIViewController {
 	@IBOutlet weak var colorName: UILabel!
-	
+
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		flow_start()
 	}
-	
+
 	override func viewDidDisappear(_ animated: Bool) {
 		flow_stop()
 		super.viewDidDisappear(animated)

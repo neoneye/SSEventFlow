@@ -1,4 +1,4 @@
-// MIT license. Copyright (c) 2016 Simon Strandgaard. All rights reserved.
+// MIT license. Copyright (c) 2017 Simon Strandgaard. All rights reserved.
 import UIKit
 import SSEventFlow
 
@@ -17,4 +17,3 @@ extension AppDelegate: FlowDispatcher {
 		print("AppDelegate.flow_dispatch()\n  \(event)\n")
 	}
 }
-
