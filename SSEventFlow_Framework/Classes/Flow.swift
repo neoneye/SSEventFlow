@@ -6,7 +6,6 @@ extension FlowEvent {
 	public func fire() { FlowManager.shared.dispatch(self) }
 }
 
-
 public protocol FlowDispatcher: class {
 	func flow_dispatch(_ event: FlowEvent)
 }
@@ -19,7 +18,6 @@ extension FlowDispatcher {
 	public func flow_stop() { FlowManager.shared.uninstall(self) }
 }
 
-
 internal class FlowManager {
 	static var shared = FlowManager()
 
@@ -27,7 +25,7 @@ internal class FlowManager {
 		weak var dispatcher: FlowDispatcher?
 	}
 	var boxes = [Box]()
-	
+
 	func dispatch(_ event: FlowEvent) {
 		purge()
 		for box in boxes { box.dispatcher?.flow_dispatch(event) }
@@ -36,16 +34,16 @@ internal class FlowManager {
 	func purge() {
 		boxes = boxes.filter { $0.dispatcher != nil }
 	}
-	
+
 	func reset() {
 		boxes = []
 	}
-	
+
 	func install(_ dispatcher: FlowDispatcher) {
 		uninstall(dispatcher)
 		boxes.append(Box(dispatcher: dispatcher))
 	}
-	
+
 	func uninstall(_ dispatcher: FlowDispatcher) {
 		boxes = boxes.filter { $0.dispatcher !== dispatcher }
 		purge()

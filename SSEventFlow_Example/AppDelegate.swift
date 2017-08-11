@@ -17,4 +17,3 @@ extension AppDelegate: FlowDispatcher {
 		print("AppDelegate.flow_dispatch()\n  \(event)\n")
 	}
 }
-

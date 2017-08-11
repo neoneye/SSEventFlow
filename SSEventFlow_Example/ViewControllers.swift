@@ -11,9 +11,7 @@ struct PickedColorEvent: FlowEvent {
 	}
 }
 
-
 struct ResetEvent: FlowEvent {}
-
 
 class ParentViewController: UIViewController {
 	@IBAction func redButtonAction(_ sender: Any) {
@@ -30,15 +28,14 @@ class ParentViewController: UIViewController {
 	}
 }
 
-
 class ChildViewController: UIViewController {
 	@IBOutlet weak var colorName: UILabel!
-	
+
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		flow_start()
 	}
-	
+
 	override func viewDidDisappear(_ animated: Bool) {
 		flow_stop()
 		super.viewDidDisappear(animated)
