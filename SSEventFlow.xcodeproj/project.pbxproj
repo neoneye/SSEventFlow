@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		422D0F2B1C79D7F2007B4389 /* SSEventFlow_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D0F2A1C79D7F2007B4389 /* SSEventFlow_Tests.swift */; };
+		422D0F2B1C79D7F2007B4389 /* SSEventFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D0F2A1C79D7F2007B4389 /* SSEventFlowTests.swift */; };
 		422D0F3A1C79EAE3007B4389 /* SSEventFlow.h in Headers */ = {isa = PBXBuildFile; fileRef = 422D0F391C79EAE3007B4389 /* SSEventFlow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		422D0F3E1C79EAE3007B4389 /* SSEventFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 422D0F371C79EAE3007B4389 /* SSEventFlow.framework */; };
 		422D0F3F1C79EAE3007B4389 /* SSEventFlow.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 422D0F371C79EAE3007B4389 /* SSEventFlow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -53,7 +53,7 @@
 
 /* Begin PBXFileReference section */
 		422D0F281C79D7F2007B4389 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		422D0F2A1C79D7F2007B4389 /* SSEventFlow_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSEventFlow_Tests.swift; sourceTree = "<group>"; };
+		422D0F2A1C79D7F2007B4389 /* SSEventFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSEventFlowTests.swift; sourceTree = "<group>"; };
 		422D0F2C1C79D7F2007B4389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		422D0F371C79EAE3007B4389 /* SSEventFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SSEventFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		422D0F391C79EAE3007B4389 /* SSEventFlow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSEventFlow.h; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				422D0F2C1C79D7F2007B4389 /* Info.plist */,
-				422D0F2A1C79D7F2007B4389 /* SSEventFlow_Tests.swift */,
+				422D0F2A1C79D7F2007B4389 /* SSEventFlowTests.swift */,
 			);
 			path = SSEventFlow_Tests;
 			sourceTree = "<group>";
@@ -321,7 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				422D0F2B1C79D7F2007B4389 /* SSEventFlow_Tests.swift in Sources */,
+				422D0F2B1C79D7F2007B4389 /* SSEventFlowTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

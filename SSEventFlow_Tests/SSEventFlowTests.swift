@@ -18,7 +18,7 @@ class MyIncrementAction: FlowEvent {
 	// do nothing
 }
 
-class SSEventFlow_Tests: XCTestCase {
+class SSEventFlowTests: XCTestCase {
 	var dispatcher: MyDispatcher?
 	var count: Int = 0
 

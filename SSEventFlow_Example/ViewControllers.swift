@@ -44,9 +44,9 @@ class ChildViewController: UIViewController {
 
 extension ChildViewController: FlowDispatcher {
 	func flow_dispatch(_ event: FlowEvent) {
-		if let e = event as? PickedColorEvent {
-			view.backgroundColor = e.color
-			colorName.text = e.name
+		if let pickedColorEvent = event as? PickedColorEvent {
+			view.backgroundColor = pickedColorEvent.color
+			colorName.text = pickedColorEvent.name
 		}
 		if event is ResetEvent {
 			view.backgroundColor = nil
