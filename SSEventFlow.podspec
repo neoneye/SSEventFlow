@@ -7,12 +7,13 @@ Pod::Spec.new do |s|
                        See video to how Flux works: https://facebook.github.io/flux/docs/in-depth-overview.html#content
                        DESC
   s.homepage         = "https://github.com/neoneye/SSEventFlow"
-  s.license          = 'MIT'
+  s.license          = { :type => 'MIT' }
   s.author           = { "Simon Strandgaard" => "neoneye@gmail.com" }
   s.source           = { :git => "https://github.com/neoneye/SSEventFlow.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/neoneye'
-  s.ios.deployment_target = '9.0'
-  s.osx.deployment_target = '10.10'
-  s.watchos.deployment_target = '3.0'
+  s.swift_version = '4.2'
+  s.ios.deployment_target = '10.0'
+  s.osx.deployment_target = '10.11'
+  s.watchos.deployment_target = '4.0'
   s.source_files = 'SSEventFlow_Framework/Classes/*'
 end
