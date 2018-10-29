@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		422D0F2B1C79D7F2007B4389 /* SSEventFlow_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D0F2A1C79D7F2007B4389 /* SSEventFlow_Tests.swift */; };
+		422D0F2B1C79D7F2007B4389 /* SSEventFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D0F2A1C79D7F2007B4389 /* SSEventFlowTests.swift */; };
 		422D0F3A1C79EAE3007B4389 /* SSEventFlow.h in Headers */ = {isa = PBXBuildFile; fileRef = 422D0F391C79EAE3007B4389 /* SSEventFlow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		422D0F3E1C79EAE3007B4389 /* SSEventFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 422D0F371C79EAE3007B4389 /* SSEventFlow.framework */; };
 		422D0F3F1C79EAE3007B4389 /* SSEventFlow.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 422D0F371C79EAE3007B4389 /* SSEventFlow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -53,7 +53,7 @@
 
 /* Begin PBXFileReference section */
 		422D0F281C79D7F2007B4389 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		422D0F2A1C79D7F2007B4389 /* SSEventFlow_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSEventFlow_Tests.swift; sourceTree = "<group>"; };
+		422D0F2A1C79D7F2007B4389 /* SSEventFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSEventFlowTests.swift; sourceTree = "<group>"; };
 		422D0F2C1C79D7F2007B4389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		422D0F371C79EAE3007B4389 /* SSEventFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SSEventFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		422D0F391C79EAE3007B4389 /* SSEventFlow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSEventFlow.h; sourceTree = "<group>"; };
@@ -100,8 +100,8 @@
 		422D0F291C79D7F2007B4389 /* SSEventFlow_Tests */ = {
 			isa = PBXGroup;
 			children = (
-				422D0F2A1C79D7F2007B4389 /* SSEventFlow_Tests.swift */,
 				422D0F2C1C79D7F2007B4389 /* Info.plist */,
+				422D0F2A1C79D7F2007B4389 /* SSEventFlowTests.swift */,
 			);
 			path = SSEventFlow_Tests;
 			sourceTree = "<group>";
@@ -110,8 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				422D0F441C79EB88007B4389 /* Classes */,
-				422D0F391C79EAE3007B4389 /* SSEventFlow.h */,
 				422D0F3B1C79EAE3007B4389 /* Info.plist */,
+				422D0F391C79EAE3007B4389 /* SSEventFlow.h */,
 			);
 			path = SSEventFlow_Framework;
 			sourceTree = "<group>";
@@ -127,11 +127,11 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				607FACD21AFB9204008FA782 /* SSEventFlow_Example */,
-				422D0F291C79D7F2007B4389 /* SSEventFlow_Tests */,
-				422D0F381C79EAE3007B4389 /* SSEventFlow_Framework */,
-				607FACD11AFB9204008FA782 /* Products */,
 				62A87EAB2EECB54DD953AB27 /* Frameworks */,
+				607FACD11AFB9204008FA782 /* Products */,
+				607FACD21AFB9204008FA782 /* SSEventFlow_Example */,
+				422D0F381C79EAE3007B4389 /* SSEventFlow_Framework */,
+				422D0F291C79D7F2007B4389 /* SSEventFlow_Tests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,11 +149,11 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewControllers.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				607FACD71AFB9204008FA782 /* ViewControllers.swift */,
 			);
 			path = SSEventFlow_Example;
 			sourceTree = "<group>";
@@ -251,7 +251,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					422D0F271C79D7F2007B4389 = {
@@ -265,6 +265,7 @@
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0830;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -320,7 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				422D0F2B1C79D7F2007B4389 /* SSEventFlow_Tests.swift in Sources */,
+				422D0F2B1C79D7F2007B4389 /* SSEventFlowTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +386,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = neoneye.SSEventFlow.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -397,7 +397,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = neoneye.SSEventFlow.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -418,7 +417,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = neoneye.SSEventFlow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -441,7 +439,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = neoneye.SSEventFlow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -456,14 +453,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -487,11 +492,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -503,14 +509,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -527,10 +541,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -540,13 +555,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SSEventFlow_Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = neoneye.SSEventFlow.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -555,13 +572,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SSEventFlow_Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = neoneye.SSEventFlow.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

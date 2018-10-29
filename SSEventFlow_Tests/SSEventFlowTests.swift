@@ -1,4 +1,4 @@
-// MIT license. Copyright (c) 2017 Simon Strandgaard. All rights reserved.
+// MIT license. Copyright (c) 2018 Simon Strandgaard. All rights reserved.
 import XCTest
 @testable import SSEventFlow
 
@@ -18,7 +18,7 @@ class MyIncrementAction: FlowEvent {
 	// do nothing
 }
 
-class SSEventFlow_Tests: XCTestCase {
+class SSEventFlowTests: XCTestCase {
 	var dispatcher: MyDispatcher?
 	var count: Int = 0
 
