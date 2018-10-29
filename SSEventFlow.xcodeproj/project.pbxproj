@@ -100,8 +100,8 @@
 		422D0F291C79D7F2007B4389 /* SSEventFlow_Tests */ = {
 			isa = PBXGroup;
 			children = (
-				422D0F2A1C79D7F2007B4389 /* SSEventFlow_Tests.swift */,
 				422D0F2C1C79D7F2007B4389 /* Info.plist */,
+				422D0F2A1C79D7F2007B4389 /* SSEventFlow_Tests.swift */,
 			);
 			path = SSEventFlow_Tests;
 			sourceTree = "<group>";
@@ -110,8 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				422D0F441C79EB88007B4389 /* Classes */,
-				422D0F391C79EAE3007B4389 /* SSEventFlow.h */,
 				422D0F3B1C79EAE3007B4389 /* Info.plist */,
+				422D0F391C79EAE3007B4389 /* SSEventFlow.h */,
 			);
 			path = SSEventFlow_Framework;
 			sourceTree = "<group>";
@@ -127,11 +127,11 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				607FACD21AFB9204008FA782 /* SSEventFlow_Example */,
-				422D0F291C79D7F2007B4389 /* SSEventFlow_Tests */,
-				422D0F381C79EAE3007B4389 /* SSEventFlow_Framework */,
-				607FACD11AFB9204008FA782 /* Products */,
 				62A87EAB2EECB54DD953AB27 /* Frameworks */,
+				607FACD11AFB9204008FA782 /* Products */,
+				607FACD21AFB9204008FA782 /* SSEventFlow_Example */,
+				422D0F381C79EAE3007B4389 /* SSEventFlow_Framework */,
+				422D0F291C79D7F2007B4389 /* SSEventFlow_Tests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,11 +149,11 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewControllers.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				607FACD71AFB9204008FA782 /* ViewControllers.swift */,
 			);
 			path = SSEventFlow_Example;
 			sourceTree = "<group>";
