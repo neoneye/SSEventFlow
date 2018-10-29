@@ -18,8 +18,8 @@ Open the SSEventFlow.xcodeproj file and run the Example project.
 ## Requirements
 
 - iOS 10.0+ / macOS 10.12+
-- Xcode 8.3+
-- Swift 3.1+
+- Xcode 10+
+- Swift 4.2+
 
 
 ## Installation
