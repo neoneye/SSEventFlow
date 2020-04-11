@@ -4,22 +4,22 @@
 [![License](https://img.shields.io/cocoapods/l/SSEventFlow.svg?style=flat)](http://cocoapods.org/pods/SSEventFlow)
 [![Platform](https://img.shields.io/cocoapods/p/SSEventFlow.svg?style=flat)](http://cocoapods.org/pods/SSEventFlow)
 
-SSEventFlow is a type safe alternative to NSNotification, inspired by Flux.
+SSEventFlow is a type safe alternative to NotificationCenter, inspired by Flux.
 
 The Flux Application Architecture was recently invented by Facebook.
-[See video to how it works](https://facebook.github.io/flux/docs/in-depth-overview.html#content)
+[See video to how it works](https://facebook.github.io/flux/docs/in-depth-overview)
 
 
 ## Usage
 
-Open the SSEventFlow.xcodeproj file and run the Example project.
+Open the `SSEventFlow.xcodeproj` file and run the Example project.
 
 
 ## Requirements
 
-- iOS 10.0+ / macOS 10.12+
-- Xcode 10+
-- Swift 4.2+
+- iOS 13.0+ / macOS 10.15+
+- Xcode 11.4+
+- Swift 5.2+
 
 
 ## Installation
