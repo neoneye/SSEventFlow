@@ -1,4 +1,4 @@
-// MIT license. Copyright (c) 2018 Simon Strandgaard. All rights reserved.
+// MIT license. Copyright (c) 2020 Simon Strandgaard. All rights reserved.
 import UIKit
 import SSEventFlow
 
@@ -6,9 +6,9 @@ import SSEventFlow
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
-	private func application(
+	func application(
 		_ application: UIApplication,
-		didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+		didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
 		flow_start()
         return true
     }
